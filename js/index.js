@@ -1,6 +1,6 @@
-fetch("https://dragonball-api.com/api/characters?limit=10")
-    .then(response => response.json())
-    .then(dbz => {
+fetch("https://dragonball-api.com/api/characters?limit=20") //url del api
+    .then(response => response.json()) //transforma los datos en formato JSON
+    .then(dbz => { //Consumo del objeto JSON
         let card = ''
         for (let db of dbz.items) {
             card += `<div class="card mb-5" style="width: 18rem;">
